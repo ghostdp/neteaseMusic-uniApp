@@ -41,7 +41,7 @@
 						</view>
 						<text class="iconfont iconbofang"></text>
 					</view> -->
-					<view class="list-music-item" v-for="(item,index) in playlist.tracks" :key="item.id">
+					<view class="list-music-item" v-for="(item,index) in playlist.tracks" :key="item.id" @tap="handleToDetail(item.id)">
 						<view class="list-music-top">{{ index + 1 }}</view>
 						<view class="list-music-song">
 							<view>{{ item.name }}</view>
@@ -89,7 +89,11 @@
 			});
 		},
 		methods: {
-			
+			handleToDetail(id){
+				uni.navigateTo({
+					url: '/pages/detail/detail?songId=' + id
+				});
+			}
 		}
 	}
 </script>

@@ -8528,7 +8528,7 @@ module.exports = {"_from":"@dcloudio/uni-stat@next","_id":"@dcloudio/uni-stat@2.
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default = { "pages": { "pages/index/index": { "navigationStyle": "custom", "usingComponents": { "musichead": "/components/musichead/musichead" }, "usingAutoImportComponents": { "musichead": "/components/musichead/musichead" } }, "pages/list/list": { "navigationStyle": "custom", "usingComponents": {}, "usingAutoImportComponents": {} } }, "globalStyle": { "navigationBarTextStyle": "black", "navigationBarTitleText": "uni-app", "navigationBarBackgroundColor": "#F8F8F8", "backgroundColor": "#F8F8F8" } };exports.default = _default;
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default = { "pages": { "pages/index/index": { "navigationStyle": "custom" }, "pages/list/list": { "navigationStyle": "custom" }, "pages/detail/detail": { "navigationStyle": "custom" } }, "globalStyle": { "navigationBarTextStyle": "black", "navigationBarTitleText": "uni-app", "navigationBarBackgroundColor": "#F8F8F8", "backgroundColor": "#F8F8F8" } };exports.default = _default;
 
 /***/ }),
 /* 8 */
@@ -8681,16 +8681,7 @@ function normalizeComponent (
 /* 18 */,
 /* 19 */,
 /* 20 */,
-/* 21 */,
-/* 22 */,
-/* 23 */,
-/* 24 */,
-/* 25 */,
-/* 26 */,
-/* 27 */,
-/* 28 */,
-/* 29 */,
-/* 30 */
+/* 21 */
 /*!******************************************************!*\
   !*** D:/test/music/neteaseMusic/common/iconfont.css ***!
   \******************************************************/
@@ -8702,11 +8693,7 @@ function normalizeComponent (
   
 
 /***/ }),
-/* 31 */,
-/* 32 */,
-/* 33 */,
-/* 34 */,
-/* 35 */
+/* 22 */
 /*!************************************************!*\
   !*** D:/test/music/neteaseMusic/common/api.js ***!
   \************************************************/
@@ -8714,7 +8701,7 @@ function normalizeComponent (
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.topList = topList;exports.list = list;var _config = __webpack_require__(/*! ./config.js */ 36);
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.topList = topList;exports.list = list;exports.songDetail = songDetail;exports.songUrl = songUrl;exports.songLyric = songLyric;exports.songSimi = songSimi;exports.songComment = songComment;var _config = __webpack_require__(/*! ./config.js */ 23);
 
 function topList() {
   var listIds = ['3', '0', '2', '1'];
@@ -8745,10 +8732,45 @@ function list(listId) {
     method: 'GET' });
 
 }
+
+function songDetail(id) {
+  return uni.request({
+    url: "".concat(_config.baseUrl, "/song/detail?ids=").concat(id),
+    method: 'GET' });
+
+}
+
+function songUrl(id) {
+  return uni.request({
+    url: "".concat(_config.baseUrl, "/song/url?id=").concat(id),
+    method: 'GET' });
+
+}
+
+function songLyric(id) {
+  return uni.request({
+    url: "".concat(_config.baseUrl, "/lyric?id=").concat(id),
+    method: 'GET' });
+
+}
+
+function songSimi(id) {
+  return uni.request({
+    url: "".concat(_config.baseUrl, "/simi/song?id=").concat(id),
+    method: 'GET' });
+
+}
+
+function songComment(id) {
+  return uni.request({
+    url: "".concat(_config.baseUrl, "/comment/music?id=").concat(id),
+    method: 'GET' });
+
+}
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ }),
-/* 36 */
+/* 23 */
 /*!***************************************************!*\
   !*** D:/test/music/neteaseMusic/common/config.js ***!
   \***************************************************/

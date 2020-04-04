@@ -12,6 +12,12 @@
 				"navigationStyle" : "custom"
 			}
         }
+        ,{
+            "path" : "pages/detail/detail",
+            "style" : {
+				"navigationStyle" : "custom"
+			}
+        }
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",

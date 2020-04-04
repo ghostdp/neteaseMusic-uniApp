@@ -29,3 +29,38 @@ export function list(listId){
 		method: 'GET'
 	});
 }
+
+export function songDetail(id){
+	return uni.request({
+		url : `${baseUrl}/song/detail?ids=${id}`,
+		method : 'GET'
+	})
+}
+
+export function songUrl(id){
+	return uni.request({
+		url : `${baseUrl}/song/url?id=${id}`,
+		method : 'GET'
+	})
+}
+
+export function songLyric(id){
+	return uni.request({
+		url : `${baseUrl}/lyric?id=${id}`,
+		method : 'GET'
+	})
+}
+
+export function songSimi(id){
+	return uni.request({
+		url : `${baseUrl}/simi/song?id=${id}`,
+		method : 'GET'
+	})
+}
+
+export function songComment(id){
+	return uni.request({
+		url : `${baseUrl}/comment/music?id=${id}`,
+		method : 'GET'
+	})
+}
