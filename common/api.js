@@ -64,3 +64,24 @@ export function songComment(id){
 		method : 'GET'
 	})
 }
+
+export function searchHot(){
+	return uni.request({
+		url : `${baseUrl}/search/hot/detail`,
+		method : 'GET'
+	})
+}
+
+export function searchWord(word){
+	return uni.request({
+		url : `${baseUrl}/search?keywords=${word}`,
+		method : 'GET'
+	})
+}
+
+export function searchSuggest(word){
+	return uni.request({
+		url : `${baseUrl}/search/suggest?keywords=${word}&type=mobile`,
+		method : 'GET'
+	})
+}

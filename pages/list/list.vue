@@ -84,6 +84,7 @@
 				if(res[1].data.code == '200'){
 					this.playlist = res[1].data.playlist;
 					this.privileges = res[1].data.privileges;
+					this.$store.commit('INIT_CHANGE',this.playlist.trackIds);
 					this.isShow = true;
 				}
 			});
